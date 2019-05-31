@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mysqldump -u root grupi > /home/vagrant/backups/db$(date +\%F).sql
+if [ $? -eq 0 ]; 
+then
+  echo "Backup Succeeded!"
+else
+  echo "Backup Failed!"
+fi
